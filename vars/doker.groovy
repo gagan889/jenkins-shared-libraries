@@ -1,4 +1,4 @@
-docker call(){
+def call(){
   echo "Start pushing the image to Docker-Hub"
   withCredentials([usernamePassword(credentialsId: 'jenkins-cred', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
   sh """
